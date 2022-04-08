@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Anastasia Vasilyeva](https://up.htmlacademy.ru/adaptive/25/user/2022839).
-* Наставник: [Павел Нюкало] (https://htmlacademy.ru/profile/id869225).
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/id869225).
 
 ---
 
