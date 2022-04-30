@@ -47,36 +47,246 @@
         </div>
       </nav>
     </header>
+
     <main class="form-container">
-
-      <section class="find-us">
-        <div class="find-us__wrapper">
-          <h4 class="find-us__text">
-            приглашаем к сотрудничеству дилеров!
-          </h4>
-          <p class="find-us__address">
-            ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург
+      <section class="form-wrapper">
+        <header class="form-caption">
+          <h1 class="form-title">
+            Подбор программы
+          </h1>
+          <p class="form-title__text">
+            Заполните анкету, и мы подберем <br>
+            программу питания для вашего кота
           </p>
-        </div>
-      </section>
+        </header>
 
-      <section class="map">
-        <div class="map__wrapper">
-          <div id="googleMap" style="width:100%;height:362px;"></div>
-          <script>
-            function myMap() {
-            var mapProp= {
-              center:new google.maps.LatLng(51.508742,-0.120850),
-              zoom:5,
-            };
-            var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-            }
-          </script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap">
-          </script>
-        </div>
+        <section class="cat-bio">
+          <div class="cat-bio-wrapper">
+            <div class="cat-bio__name">
+              <form class="cat-bio__form" action="https://echo.htmlacademy.ru/" method="post">
+                <p class="field-group cat-bio__form-name">
+                  <label class="cat-bio__form-label" for="cat-name">
+                    Имя:*
+                  </label>
+                  <input class="field" type="text" id="cat-name" name="cat-name" placeholder="БАРСИК">
+                </p>
+                <p class="field-group cat-bio__form-weight">
+                  <label class="cat-bio__form-label" for="cat-weight">
+                    Вес (КГ):*
+                  </label>
+                  <input class="feild" type="number" id="cat-weight" name="cat-weight" placeholder="7">
+                </p>
+                <p class="field-group cat-bi__form-weight">
+                  <label class="cat-bio__form-label" for="cat-age">
+                    Возраст (лет):
+                  </label>
+                  <input class="feild" type="number" id="cat-age" name="cat-weight" placeholder="7">
+                </p>
+              </form>
+            </div>
+
+            <div class="cat-bio__weight">
+              <fieldset class="cat-bio__group">
+                <legend class="cat-bio__title visually-hidden">Коррекция веса:</legend>
+                <ul class="cat-bio__list">
+                  <li class="cat-bio__item">
+                    <label class="control">
+                      <input
+                        class="control__input"
+                        type="radio"
+                        name="weight-correction"
+                        value="weight-loss"
+                        checked
+                      />
+                      <span
+                        class="control__checkbox control__checkbox--radio"
+                      ></span>
+                      <span class="control__checkbox-title">
+                        Похудение
+                      </span>
+                    </label>
+                  </li>
+
+                  <li class="cat-bio__item">
+                    <label class="control">
+                      <input
+                        class="control__input"
+                        type="radio"
+                        name="weight-correction"
+                        value="gain-weight"
+                      />
+                      <span
+                        class="control__checkbox control__checkbox--radio"
+                      ></span>
+                      <span class="control__checkbox-title">
+                        Набор массы
+                      </span>
+                    </label>
+                  </li>
+
+                  <li class="cat-bio__item">
+                    <label class="control">
+                      <input
+                        class="control__input"
+                        type="radio"
+                        name="weight-correction"
+                        value="need-help"
+                      />
+                      <span
+                        class="control__checkbox control__checkbox--radio"
+                      ></span>
+                      <span class="control__checkbox-title">
+                        Не знаю (Нужен ваш совет)
+                      </span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <div class="contacts-wrapper">
+            <div class="separator">
+              <div class="line"></div>
+                <h2 class="form__title">
+                  Контактные данные<br>
+                  (владельца кота)
+                </h2>
+              <div class="line"></div>
+            </div>
+            <div class="contacts__field">
+              <form class="contacts__form" action="https://echo.htmlacademy.ru/" method="post">
+                <p class="field-group contacts__form-email">
+                  <label class="contacts__form-label" for="contacts-email">
+                    E-mail:*
+                  </label>
+                  <input class="feild" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" autocomplete="off" required>
+                </p>
+                <p class="field-group contacts__form-telephone">
+                  <label class="contacts__form-label" for="contacts-telephone">
+                    Телефон:*
+                  </label>
+                  <input class="feild" type="number" id="telephone" placeholder="8 (960) 900-60-90" autocomplete="off" required>
+                </p>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="comment">
+          <div class="comment-wrapper">
+            <div class="separator">
+              <div class="line"></div>
+                <h2 class="form__title">
+                  Комментарий
+                </h2>
+              <div class="line"></div>
+            </div>
+            <div class="comment__field">
+              <form class="comment__form" action="https://echo.htmlacademy.ru/" method="post"></form>
+                <input class="feild comment-box" type="text" id="comment" name="comment" placeholder="Расскажите обо всех повАдках кота">
+            </div>
+          </div>
+        </section>
+
+        <section class="additional-info">
+          <div class="additional-info-wrapper">
+            <div class="separator">
+              <div class="line"></div>
+                <h2 class="form__title">
+                  Дополнительно
+                </h2>
+              <div class="line"></div>
+            </div>
+            <div class="additional-info__feild">
+              <fieldset class="additional-info__group">
+                <ul class="additional-info__list">
+                  <li class="additional-info__item">
+                    <label class="control">
+                      <input
+                        class="control__input"
+                        type="checkbox"
+                        name="sugar"
+                        checked/>
+                      <span class="control__checkbox"></span>
+                      сахарозаменитель
+                    </label>
+                  </li>
+                  <li class="additional-info__item">
+                    <label class="control">
+                      <input
+                        class="control__input"
+                        type="checkbox"
+                        name="water"/>
+                      <span class="control__checkbox"></span>
+                      питьевая вода
+                    </label>
+                  </li>
+                  <li class="additional-info__item">
+                    <label class="control">
+                      <input
+                        class="control__input"
+                        type="checkbox"
+                        name="milk"/>
+                      <span class="control__checkbox"></span>
+                      молоко
+                    </label>
+                  </li>
+                  <li class="additional-info__item">
+                    <label class="control">
+                      <input
+                        class="control__input"
+                        type="checkbox"
+                        name="vitamins"/>
+                      <span class="control__checkbox"></span>
+                      витамины
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="additional-info__button">
+              <button class="button button--form" type="button">
+                отправить заявку
+              </button>
+              <p class="additional-info__note">
+                * — Обязательные поля
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="find-us">
+          <div class="find-us__wrapper">
+            <h4 class="find-us__text">
+              приглашаем к сотрудничеству дилеров!
+            </h4>
+            <p class="find-us__address">
+              ул. Большая
+              Конюшенная, д. 19/8
+              Санкт-Петербург
+            </p>
+          </div>
+        </section>
+
+        <section class="map">
+          <div class="map__wrapper">
+            <div id="googleMap" style="width:100%;height:362px;"></div>
+            <script>
+              function myMap() {
+              var mapProp= {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+              };
+              var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+              }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap">
+            </script>
+          </div>
+        </section>
       </section>
     </main>
 
