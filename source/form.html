@@ -28,7 +28,7 @@
         </button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--current">
+            <li class="site-list__item site-list__item">
               <a href="index.html">
                 Главная
               </a>
@@ -38,7 +38,7 @@
                 Каталог продукции
               </a>
             </li>
-            <li class="site-list__item">
+            <li class="site-list__item--current">
               <a href="#">
                 Подбор Программы
               </a>
@@ -49,21 +49,21 @@
     </header>
 
     <main class="form-container">
-      <section class="form-wrapper">
-        <header class="form-caption">
-          <h1 class="form-title">
+      <section class="form__wrapper">
+        <header class="form__caption">
+          <h1 class="form__title">
             Подбор программы
           </h1>
-          <p class="form-title__text">
+          <p class="form__title-text">
             Заполните анкету, и мы подберем <br>
             программу питания для вашего кота
           </p>
         </header>
 
-        <section class="cat-bio">
-          <div class="cat-bio-wrapper">
-            <div class="cat-bio__name">
-              <form class="cat-bio__form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="cat-bio__form" action="https://echo.htmlacademy.ru/" method="post">
+
+          <section class="cat-bio">
+              <fieldset class="cat-bio__name">
                 <p class="field-group cat-bio__form-name">
                   <label class="cat-bio__form-label" for="cat-name">
                     Имя:*
@@ -76,78 +76,72 @@
                   </label>
                   <input class="feild" type="number" id="cat-weight" name="cat-weight" placeholder="7">
                 </p>
-                <p class="field-group cat-bi__form-weight">
+                <p class="field-group cat-bio__form-weight">
                   <label class="cat-bio__form-label" for="cat-age">
                     Возраст (лет):
                   </label>
-                  <input class="feild" type="number" id="cat-age" name="cat-weight" placeholder="7">
+                  <input class="feild" type="number" id="cat-age" name="cat-age" placeholder="7">
                 </p>
-              </form>
-            </div>
-
-            <div class="cat-bio__weight">
-              <fieldset class="cat-bio__group">
-                <legend class="cat-bio__title visually-hidden">Коррекция веса:</legend>
-                <ul class="cat-bio__list">
-                  <li class="cat-bio__item">
-                    <label class="control">
-                      <input
-                        class="control__input"
-                        type="radio"
-                        name="weight-correction"
-                        value="weight-loss"
-                        checked
-                      />
-                      <span
-                        class="control__checkbox control__checkbox--radio"
-                      ></span>
-                      <span class="control__checkbox-title">
-                        Похудение
-                      </span>
-                    </label>
-                  </li>
-
-                  <li class="cat-bio__item">
-                    <label class="control">
-                      <input
-                        class="control__input"
-                        type="radio"
-                        name="weight-correction"
-                        value="gain-weight"
-                      />
-                      <span
-                        class="control__checkbox control__checkbox--radio"
-                      ></span>
-                      <span class="control__checkbox-title">
-                        Набор массы
-                      </span>
-                    </label>
-                  </li>
-
-                  <li class="cat-bio__item">
-                    <label class="control">
-                      <input
-                        class="control__input"
-                        type="radio"
-                        name="weight-correction"
-                        value="need-help"
-                      />
-                      <span
-                        class="control__checkbox control__checkbox--radio"
-                      ></span>
-                      <span class="control__checkbox-title">
-                        Не знаю (Нужен ваш совет)
-                      </span>
-                    </label>
-                  </li>
-                </ul>
               </fieldset>
-            </div>
-          </div>
-        </section>
 
-        <section class="contacts">
-          <div class="contacts-wrapper">
+              <div class="cat-bio__weight">
+                <fieldset class="cat-bio__group">
+                  <legend class="cat-bio__title visually-hidden">Коррекция веса:</legend>
+                  <ul class="cat-bio__list">
+                    <li class="cat-bio__item">
+                      <label class="control">
+                        <input
+                          class="control__input"
+                          type="radio"
+                          name="weight-correction"
+                          value="weight-loss"
+                          checked/>
+                        <span
+                          class="control__checkbox control__checkbox--radio"
+                        ></span>
+                        <span class="control__checkbox-title">
+                          Похудение
+                        </span>
+                      </label>
+                    </li>
+
+                    <li class="cat-bio__item">
+                      <label class="control">
+                        <input
+                          class="control__input"
+                          type="radio"
+                          name="weight-correction"
+                          value="gain-weight"/>
+                        <span
+                          class="control__checkbox control__checkbox--radio"
+                        ></span>
+                        <span class="control__checkbox-title">
+                          Набор массы
+                        </span>
+                      </label>
+                    </li>
+
+                    <li class="cat-bio__item">
+                      <label class="control">
+                        <input
+                          class="control__input"
+                          type="radio"
+                          name="weight-correction"
+                          value="need-help"/>
+                        <span
+                          class="control__checkbox control__checkbox--radio"
+                        ></span>
+                        <span class="control__checkbox-title">
+                          Не знаю (Нужен ваш совет)
+                        </span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+          </section>
+
+          <section class="contacts">
             <div class="separator">
               <div class="line"></div>
                 <h2 class="form__title">
@@ -156,27 +150,23 @@
                 </h2>
               <div class="line"></div>
             </div>
-            <div class="contacts__field">
-              <form class="contacts__form" action="https://echo.htmlacademy.ru/" method="post">
-                <p class="field-group contacts__form-email">
-                  <label class="contacts__form-label" for="contacts-email">
-                    E-mail:*
-                  </label>
-                  <input class="feild" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" autocomplete="off" required>
-                </p>
-                <p class="field-group contacts__form-telephone">
-                  <label class="contacts__form-label" for="contacts-telephone">
-                    Телефон:*
-                  </label>
-                  <input class="feild" type="number" id="telephone" placeholder="8 (960) 900-60-90" autocomplete="off" required>
-                </p>
-              </form>
-            </div>
-          </div>
-        </section>
+            <fieldset class="contacts__field">
+              <p class="field-group contacts__form-email">
+                <label class="contacts__form-label" for="contacts-email">
+                  E-mail:*
+                </label>
+                <input class="feild" type="email" id="contacts-email" name="email" placeholder="kuklachev@gmail.com" autocomplete="off" required>
+              </p>
+              <p class="field-group contacts__form-telephone">
+                <label class="contacts__form-label" for="contacts-telephone">
+                  Телефон:*
+                </label>
+                <input class="feild" type="number" id="contacts-telephone" placeholder="8 (960) 900-60-90" autocomplete="off" required>
+              </p>
+            </fieldset>
+          </section>
 
-        <section class="comment">
-          <div class="comment-wrapper">
+          <section class="comment">
             <div class="separator">
               <div class="line"></div>
                 <h2 class="form__title">
@@ -184,15 +174,12 @@
                 </h2>
               <div class="line"></div>
             </div>
-            <div class="comment__field">
-              <form class="comment__form" action="https://echo.htmlacademy.ru/" method="post"></form>
-                <input class="feild comment-box" type="text" id="comment" name="comment" placeholder="Расскажите обо всех повАдках кота">
-            </div>
-          </div>
-        </section>
+            <fieldset class="comment__field">
+              <input class="feild comment-box" type="text" id="comment" name="comment" placeholder="Расскажите обо всех повАдках кота">
+            </fieldset>
+          </section>
 
-        <section class="additional-info">
-          <div class="additional-info-wrapper">
+          <section class="additional-info">
             <div class="separator">
               <div class="line"></div>
                 <h2 class="form__title">
@@ -200,69 +187,69 @@
                 </h2>
               <div class="line"></div>
             </div>
-            <div class="additional-info__feild">
-              <fieldset class="additional-info__group">
-                <ul class="additional-info__list">
-                  <li class="additional-info__item">
-                    <label class="control">
-                      <input
-                        class="control__input"
-                        type="checkbox"
-                        name="sugar"
-                        checked/>
-                      <span class="control__checkbox"></span>
-                      сахарозаменитель
-                    </label>
-                  </li>
-                  <li class="additional-info__item">
-                    <label class="control">
-                      <input
-                        class="control__input"
-                        type="checkbox"
-                        name="water"/>
-                      <span class="control__checkbox"></span>
-                      питьевая вода
-                    </label>
-                  </li>
-                  <li class="additional-info__item">
-                    <label class="control">
-                      <input
-                        class="control__input"
-                        type="checkbox"
-                        name="milk"/>
-                      <span class="control__checkbox"></span>
-                      молоко
-                    </label>
-                  </li>
-                  <li class="additional-info__item">
-                    <label class="control">
-                      <input
-                        class="control__input"
-                        type="checkbox"
-                        name="vitamins"/>
-                      <span class="control__checkbox"></span>
-                      витамины
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-            </div>
+
+            <fieldset class="additional-info__group">
+              <ul class="additional-info__list">
+                <li class="additional-info__item">
+                  <label class="control">
+                    <input
+                      class="control__input"
+                      type="checkbox"
+                      name="sugar"
+                      checked/>
+                    <span class="control__checkbox"></span>
+                    сахарозаменитель
+                  </label>
+                </li>
+                <li class="additional-info__item">
+                  <label class="control">
+                    <input
+                      class="control__input"
+                      type="checkbox"
+                      name="water"/>
+                    <span class="control__checkbox"></span>
+                    питьевая вода
+                  </label>
+                </li>
+                <li class="additional-info__item">
+                  <label class="control">
+                    <input
+                      class="control__input"
+                      type="checkbox"
+                      name="milk"/>
+                    <span class="control__checkbox"></span>
+                    молоко
+                  </label>
+                </li>
+                <li class="additional-info__item">
+                  <label class="control">
+                    <input
+                      class="control__input"
+                      type="checkbox"
+                      name="vitamins"/>
+                    <span class="control__checkbox"></span>
+                    витамины
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
             <div class="additional-info__button">
-              <button class="button button--form" type="button">
+              <button class="button button--form" type="submit">
                 отправить заявку
               </button>
               <p class="additional-info__note">
                 * — Обязательные поля
               </p>
             </div>
-          </div>
-        </section>
+          </section>
+        </form>
 
         <section class="find-us">
           <div class="find-us__wrapper">
-            <h4 class="find-us__text">
+            <h3 class="find-us__text">
               приглашаем к сотрудничеству дилеров!
-            </h4>
+            </h3>
             <p class="find-us__address">
               ул. Большая
               Конюшенная, д. 19/8
@@ -296,22 +283,22 @@
           <span class="visually-hidden">Логотип Кэт Энерджи.</span>
         </a>
         <div class="social">
-          <ul class="socials__list">
-            <li class="socials__item">
+          <ul class="social__list">
+            <li class="social__item">
               <a
                 class="social__button social__button--twitter"
                 href="https://vk.com/htmlacademy_ru">
                 <span class="visually-hidden">VK</span>
               </a>
             </li>
-            <li class="socials__item">
+            <li class="social__item">
               <a
                 class="social__button social__button--facebook"
                 href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">YouTube</span>
               </a>
             </li>
-            <li class="socials__item">
+            <li class="social__item">
               <a
                 class="social__button social__button--youtube"
                 href="https://t.me/htmlacademy">
