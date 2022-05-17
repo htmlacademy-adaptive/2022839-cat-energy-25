@@ -7,7 +7,6 @@
 }
 
 .about__list {
-  font-family: "Arial", sans-serif;
   list-style-type: none;
   background-color: #ffffff;
   padding: 0;
@@ -15,29 +14,23 @@
 
 .about__item {
   margin-bottom: 20px;
-}
-
-.about__list--ingridients {
-  background-image: url("/images/mobile_index/list_elements.svg");
   background-position: left;
-  background-repeat: no-repeat;
-}
+  background-repeat: no-repeat no-repeat;
 
-.about__item--watersoluble {
-  background-image: url("../images/mobile_index/list_watersoluble.svg");
-  background-position: left;
-  background-repeat: no-repeat;
-}
+  &--ingridients {
+    background-image: url("/images/mobile_index/list_elements.svg");
+  }
 
-.about__item--functional {
-  background-image: url("../images/mobile_index/list_functional.svg");
-  background-position: left;
-  background-repeat: no-repeat;
-}
+  &--watersoluble {
+    background-image: url("../images/mobile_index/list_watersoluble.svg");
+  }
 
-.about__item--fast {
-  background-image: url("../images/mobile_index/list_fast.svg");
-  background-position: left;
-  background-repeat: no-repeat;
+  &__item--functional {
+    background-image: url("../images/mobile_index/list_functional.svg");
+  }
+
+  &__item--fast {
+    background-image: url("../images/mobile_index/list_fast.svg");
+  }
 }
 
