@@ -4,20 +4,25 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 
-<body class="page__body">
+<body class="page-body">
   <header class="main-header">
     <a class="main-header__logo">
       <img
         class="main-header__logo-image"
-        src="#" width="34" height="38" a
-        lt="Логотип Кэт энерджи.">
+        src="../images/mobile_index/logo-mobile.svg"
+        width="34"
+        height="38"
+        alt="Логотип Кэт энерджи.">
     </a>
     <a class="main-header__logo-name">
       <img
         class="main-header__logo-name-text"
-        src="#" width="101" height="18"
+        src="../images/mobile_index/index_cat_energy_logo_text.svg"
+        width="101"
+        height="18"
         alt="Кэт энерджи.">
     </a>
     <nav class="main-nav">
@@ -27,17 +32,17 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
-            <a href="index.html">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
-          <li class="site-list__item site-list__item--current">
-            <a href="catalog.html">
+          <li class="site-list__item  site-list__item--current">
+            <a class="site-list__link" href="catalog.html">
               Каталог продукции
             </a>
           </li>
           <li class="site-list__item">
-            <a href="form.html">
+            <a class="site-list__link" href="form.html">
               Подбор Программы
             </a>
           </li>
@@ -295,7 +300,8 @@
             class="catalog-cards__product-image"
             alt="Поодолжение следует."
             src="images/mobile_index/plus.svg">
-          <h2 class="catalog-cards__subtitle catalog-cards__subtitle--empty">
+          <h2 class="catalog-cards__subtitle
+                     catalog-cards__subtitle--empty">
             Показать еще 100500 товаров
           </h2>
           <p class="catalog-cards__description">
@@ -417,7 +423,8 @@
     <section class="map">
       <div class="map__wrapper">
         <h2 class="map-title visually hidden">Как нас найти - карта.</h2>
-        <div id="googleMap" style="width:100%;height:362px;"></div>
+        <div id="googleMap" style="width: 100%;
+        height: 362px;"></div>
         <script>
           function myMap() {
             var mapProp = {
@@ -434,22 +441,33 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper">
       <a class="main-footer__logo" href="index.html">
-        <span class="visually-hidden">Логотип Кэт Энерджи.</span>
+        <img
+          class="main-footer__logo-image"
+          src="../images/mobile_index/footer_logo_cat_energy.svg"
+          width="128"
+          height="24"
+          alt="Логотип Кэт энерджи.">
       </a>
       <div class="social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__button social__button--twitter" href="https://vk.com/htmlacademy_ru">
+            <a
+              class="social__button social__button--vk"
+              href="https://vk.com/htmlacademy_ru">
               <span class="visually-hidden">VK</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__button social__button--facebook" href="https://www.youtube.com/user/htmlacademyru">
+            <a
+              class="social__button social__button--youtube"
+              href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">YouTube</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__button social__button--youtube" href="https://t.me/htmlacademy">
+            <a
+              class="social__button social__button--telegram"
+              href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
             </a>
           </li>
@@ -458,12 +476,15 @@
       <p class="main-footer__logo main-footer__logo--text">
         HTML Academy</p>
       <a class="main-footer__logo main-footer__logo--htmlacademy" href="https://htmlacademy.ru">
-        <span class="visually-hidden">Логотип HTML академии.</span>
+        <img
+          class="main-header__logo-image"
+          src="../images/mobile_index/logo_html_academy.svg"
+          width="27"
+          height="34"
+          alt="Логотип Кэт энерджи.">
       </a>
     </div>
   </footer>
-
-
 </body>
 
 </html>
